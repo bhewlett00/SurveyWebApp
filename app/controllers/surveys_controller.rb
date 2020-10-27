@@ -8,10 +8,11 @@ class SurveysController < ApplicationController
 	end 
 
 	def create
-		survey = SurveyName.new(survey_params)
+		survey_name = SurveyName.new(survey_params)
 		if survey.save
 			redirect_to "/surveys"
 		else
+			flash[:errors] = survey_name.errors.full_messages
 			redirect_to "/surveys/new"
 		end
 	end

@@ -12,11 +12,11 @@
 			<td><%= survey.survey_name %></td>
 			<td>
 				<a href="/surveys/<%= survey.id %>">View</a> |
-				<a href="/surveys/<%= survey.id %>">Create</a> |
-				<a href="/surveys/<%= survey.id %>">Respond</a>
+				<a href="/surveys/<%= survey.id %>">Create Questions</a> |
+				<a href="/surveys/<%= survey.id %>">Respond to Survey</a>
 			</td>
 		</tr>
 		<% end %>
 	</tbody>
 </table>
-<a href="surveys/new">Create Surveys</a>
+<a class="btn btn-primary" href="/surveys/new" role="button">Create Survey</a>
